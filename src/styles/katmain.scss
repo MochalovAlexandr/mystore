@@ -1,0 +1,17 @@
+.katmain{
+    grid-area: katmain;
+    display: grid;
+    grid-template: 1fr minmax(133px,auto)/1fr minmax(auto,340px) minmax(auto, 970px) 1fr;
+}
+
+@media (max-width: 1024px){
+    .katmain{       
+        grid-template: minmax(75px,auto) minmax(133px,auto) minmax(133px,auto) minmax(98px,auto)/minmax(auto,512px) minmax(auto, 512px);
+    }
+}
+
+@media (max-width: 320px){
+    .katmain{       
+        grid-template: minmax(46px,auto) minmax(133px,auto) minmax(133px,auto) minmax(121px,auto)/minmax(auto,512px) minmax(auto, 512px);
+    }
+}

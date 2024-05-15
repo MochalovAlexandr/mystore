@@ -1,0 +1,192 @@
+.useful{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: grid;
+    grid-template: minmax(56px, auto) minmax(auto, auto) / 1fr minmax(auto, 1310px) 1fr;  
+    &__title{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 0 15px 10px;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        color: #333333;
+    }
+    &__content{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 0 15px 0;  
+        display: grid;
+        grid-template: minmax(676px, auto) / minmax(auto, 624px) minmax(auto, 624px);
+        column-gap: 32px;
+    }
+    .uscard{
+        position: relative;
+        max-width: 624px;
+        width: 100%;
+        min-height: 676px;
+        padding-bottom: 100px;
+        border-radius: 10px;
+        background-color: #F6F6F6;      
+        &__wrapusimg{
+            height: 426px;
+            margin-bottom: 15px;        
+        }
+        &__usimg{
+            max-width: 624px;  
+            width: 100%;     
+        }
+        &__wrapcontent{
+            padding: 19px 30px 10px;           
+        }
+        &__text{
+            margin-bottom: 5px;
+            font-family: 'Open sans', 'sans-serif';
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32.68px;
+            letter-spacing: -0.3px;
+            color: #333333;
+        }
+        &__usbtn{
+            position: absolute;
+            bottom: 28px;
+            left: 30px;
+            z-index: 5;
+            padding: 18px 34px 16px 35px;
+            border: 2px solid #A65CF0;
+            border-radius: 10px;
+            background: transparent;
+            font-family: 'Open sans', 'sans-serif';
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: -1.1px;
+            color: #A65CF0;
+            cursor: pointer;
+            transition: color .3s ease-in-out, background-color .3s ease-in-out;
+        }
+        &__usbtn:hover{
+            background-color: #A65CF0;
+            color: #FFFFFF;
+        }
+        &__usbtn:active:not(:focus-visible){
+            background-color: #7033AC;
+            color: #FFFFFF;
+        }
+        &__usbtn:focus-visible{
+            background-color: #C998FB;
+            color: #FFFFFF;
+            outline: 2px solid #A65CF0;
+            outline-offset: -2px;
+        }  
+    }
+    .uscard3, .uscard4, .uscard5{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px){
+    .useful{
+        &__title{
+            padding: 0 36px;
+        }
+        &__content{            
+            padding: 0 36px 0;              
+            grid-template: minmax(456px, auto) / minmax(auto, 296px) minmax(auto, 296px) minmax(auto, 296px);
+            column-gap: 32px;
+        }
+        .uscard3{
+            display: block;
+        }
+        .uscard{
+            position: relative;
+            max-width: 296px;
+            width: 100%;
+            min-height: 456px;
+            height: 100%;
+            padding-bottom: 100px;
+            border-radius: 10px;
+            background-color: #F6F6F6;          
+            &__wrapusimg{
+                height: 202px;
+                margin-bottom: 15px;        
+            }          
+            &__text{                
+                font-size: 16px;
+                line-height: 21.79px;
+                letter-spacing: -0.3px;
+                color: #333333;
+            }
+            &__usbtn{
+                bottom: 33px;
+                left: 30px;
+                z-index: 5;
+                padding: 18px 33px 16px 35px;           
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 768px){
+    .useful{
+        padding-top: 30px;
+        &__title{
+            padding: 0 72px;
+        }
+        &__content{           
+            padding: 0 72px 0;            
+            grid-template: minmax(456px, auto) / minmax(auto, 296px) minmax(auto, 296px);
+            column-gap: 32px;
+        }
+        .uscard3{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 580px){
+    .useful{
+        padding-top: 27px;
+        grid-template: minmax(49px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+            &__title{
+            padding: 0 32px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__content{           
+            padding: 0 13px 0;              
+            grid-template: repeat(5, minmax(456px, auto))  / minmax(auto, 296px);
+            row-gap: 23.5px;   
+            justify-content: center;         
+        }            
+        .uscard3, .uscard4, .uscard5{
+            display: block;
+        }   
+    }   
+}
+
+@media (max-width: 320px){
+    .useful{
+        padding-top: 27px;
+        grid-template: minmax(49px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+        &__title{
+            padding: 0 13px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__content{           
+            padding: 0 13px 0;              
+            grid-template: repeat(5, minmax(456px, auto))  / minmax(auto, 296px);
+            row-gap: 23.5px;            
+        }            
+        .uscard3, .uscard4, .uscard5{
+            display: block;
+        }   
+    }   
+}

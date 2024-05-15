@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+}
+// div.hero
+// section.rating,
+// div.banner
+// section.top,
+// section.useful,
+// section.weglad
+// {
+//   display: none;
+// }
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open-Sans-Regular'),
+      url('../resources/fonts/open-sans.woff2') format("woff2"),
+      url('../resources/fonts/open-sans.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    src: local('Open-Sans-Semibold'),
+      url('../resources/fonts/open-sans-semibold.woff2') format("woff2"),
+      url('../resources/fonts/open-sans-semibold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    src: local('Open-Sans-Bold'),
+      url('../resources/fonts/open-sans-bold.woff2') format("woff2"),
+      url('../resources/fonts/open-sans-bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Playfair Display SC";
+    src: url('../resources/fonts/PlayfairDisplaySC-Black.ttf');
+  }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+div{
+    margin: 0;
+    padding: 0;    
+}
+a{
+    text-decoration: none;
+}
+
+
+.wrapper {
+    display: grid;
+	min-height: 100vh;
+    grid-template: minmax(200px, auto) minmax(400px, auto) 1fr minmax(166px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+        "hero"
+		"main"
+		"footer";
+}
+
+.katwrapper {
+    display: grid;
+	min-height: 100vh;
+    grid-template: minmax(200px, auto) 1fr minmax(166px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+        "katmain"		
+		"footer";
+}
+li {
+    list-style: none;
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        display: grid;
+        min-height: 100vh;
+        grid-template: minmax(200px, auto) minmax(302px, auto) 1fr minmax(166px, auto) / 1fr;
+        grid-template-areas:
+            "header"
+            "hero"
+            "main"
+            "footer";
+    }
+}
+
+

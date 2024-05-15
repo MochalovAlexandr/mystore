@@ -1,0 +1,325 @@
+.weglad{
+    padding-top: 35px;
+    display: grid;
+    grid-template: minmax(32px, auto) minmax(auto, auto) / 1fr minmax(auto, 1310px) 1fr;  
+    &__title{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 0px 15px 0;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+        color: #333333;
+    }
+    &__content{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 0 15px 0;  
+        display: flex;       
+    }
+    &__content::after{
+        content: "";
+        display: inline-block;
+        max-width: 624px;
+        width: 100%;
+        min-height: 383px;        
+        background-image: url('./images/near.png');
+        background-repeat: no-repeat;
+        background-position: 29px -6px;
+    }
+    &__wrapleft{
+        max-width: 624px;
+        width: 100%;
+        min-height: 470px;
+        padding: 10px 5px 0 0;
+    }
+    &__wrapright{
+        width: 49%;
+        min-height: 470px;
+        background-image: url('./images/near.png');
+        background-repeat: no-repeat;
+        background-position: 29px -6px;
+    }
+    &__text{
+        padding-bottom: 16px;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.07px;
+        letter-spacing: -0.15px;
+        color: #666666;
+    }
+    &__formtext, &__formtel, &__formmail{
+        width: 100%;
+        min-height: 54px;
+        padding-left: 16px;
+        border-radius: 10px;
+        background-color: #F6F6F6;
+        border: none;
+        margin-bottom: 30px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-family: "Open sans",sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+        color: #333333;
+    }
+    input:hover{
+        background-color: #EAEAEA;
+    }
+    input:active{
+        outline: 1px solid #B8EC64;
+        outline: none;
+    }
+    input:focus-visible:not(:active){
+        outline: 2px solid #A65CF0;
+        background-color: #F8EFFF;
+    }
+    ::placeholder{
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+        letter-spacing: -0.15px;
+        color: #999999;
+    }
+    &__formbtn{
+        display: block;
+        padding: 19px 35px 19px 35px;
+        border: none;
+        border-radius: 10px;
+        background: transparent;
+        background-color: #A65CF0;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+    &__formbtn:hover{
+        background-color: #C998FB;
+    } 
+    &__formbtn:active:not(:focus-visible){
+        background-color: #7033AC;
+    }
+    &__formbtn:focus-visible{
+        background-color: #C998FB;
+        outline: 2px solid #7033AC;
+        outline-offset: -2px;
+    }
+    &__formchecklabel{
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding-left: 22px;
+        cursor: pointer;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.07px;
+        letter-spacing: -0.18px;
+        color: #333333;
+    }
+    &__formagreement{
+        position: relative;
+        font-family: 'Open sans', 'sans-serif';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17.07px;
+        color: #A65CF0;
+        cursor: pointer;
+    }
+    &__formagreement::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        z-index: 10;
+        left: 0;
+        bottom: 2px;
+        background-color: #A65CF0;
+    }      
+      .check {
+        display: none;
+      }
+      
+      .check~span {
+        position: absolute;
+        top: 2.5px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 3px;
+        text-align: center;
+        border: 1px solid #A65CF0;
+        background-color: transparent;
+        transition: background-color .001s linear;
+      }
+      
+      .check~span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: none;
+        transition: background .001s linear;
+      }
+      
+      .check:checked~span::before {
+        background: url('./images/checked.png');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      .check:checked~span {
+        background-color: #A65CF0;
+      }
+}
+@media (max-width: 1024px){
+    .weglad {
+        display: grid;
+        grid-template: minmax(30px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+        &__title{
+            padding: 0 35px;
+        }
+        &__content{
+            padding: 0 35px;
+        }
+        &__content:after{
+            max-width: 540px;
+            background-size: 94% 67%;
+            background-position: 28px 43px;
+        }
+        &__wrapleft {
+            max-width: 412px;
+             width: 100%;
+            padding: 8px 11px 0 0px;
+        }
+        &__text{
+            padding-right: 5px;
+        }
+        &__wrapright {
+            width: 55%;
+            background-size: 514px 316px;
+            background-position: 18px 44px;
+        }
+    }
+}
+@media (max-width: 768px){
+    .weglad {
+        display: grid;
+        grid-template: minmax(30px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+        &__title{
+            padding:0  71px;
+        }
+        &__content{
+            padding: 0 71px;
+        }
+        &__content:after{
+            max-width: 212px;
+            background-image: url('./images/768near.png');
+            background-size: 87% 94%;
+            background-position: 28px -18px;
+            overflow: visible;
+        }
+        &__wrapleft {
+            width: 67%;
+            padding: 8px 11px 0 0px;
+        }
+        &__text{
+            padding-right: 5px;
+        }
+        &__wrapright {
+            width: 33%;
+            background-image: url('./images/768near.png');
+            background-size: 187px 444px;
+            background-position: 19px -20px;
+        }
+    }
+}
+@media (max-width: 645px){
+    .weglad {
+        &__content:after{
+            display: none;
+        }
+        &__wrapleft {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 550px){
+    .weglad {
+        padding-top: 28px;        
+        grid-template: minmax(33px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+        &__title{
+            padding: 0 32px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__content{
+            padding: 0 32px;
+        }        
+        &__wrapleft {
+            width: 100%;
+            padding: 0 11px 0 0px;
+        }
+        &__text{
+            padding-right: 5px;
+        }
+        &__formchecklabel{
+            font-size: 12px;
+            line-height: 16.63px;
+        }
+        &__formagreement{
+            font-size: 12px;
+            line-height: 14.63px;
+        }
+        &__wrapright {
+            display: none;
+        }
+    }
+}
+@media (max-width: 320px){
+    .weglad {
+        padding-top: 28px;        
+        grid-template: minmax(33px,auto) minmax(auto,auto)/1fr minmax(auto,1310px) 1fr;
+        &__title{
+            padding: 0 12px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__content{
+            padding: 0 12px;
+        }
+        &__wrapleft {
+            width: 100%;
+            padding: 0 11px 0 0px;
+        }
+        &__text{
+            padding-right: 5px;
+        }
+        &__formchecklabel{
+            font-size: 12px;
+            line-height: 16.63px;
+        }
+        &__formagreement{
+            font-size: 12px;
+            line-height: 14.63px;
+        }
+        &__wrapright {
+            display: none;
+        }
+    }
+}
